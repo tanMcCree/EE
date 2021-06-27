@@ -1,0 +1,20 @@
+import time
+from pyb import UART
+
+uart = UART(1, 9600)
+
+while(True):
+    uart.write("Hello World!\r")
+    time.sleep(1000)
+
+
+import time
+from pyb import UART
+uart = UART(1, 9600)
+while(True):
+	data = uart.read()
+    print(data)
+	time.sleep(1000)
+
+
+
